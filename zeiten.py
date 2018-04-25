@@ -1,4 +1,5 @@
 # zeiten.py 
+import sys
 
 def zeitInSekunden(h,m,s):
     gesamt = 0
@@ -7,36 +8,17 @@ def zeitInSekunden(h,m,s):
     gesamt += s
     return gesamt
 
-beginnZeit = input("Beginnzeit: ")
-endeZeit = input("Endezeit: ")
-
-# Zeit in Format HH:MM:SS
-beginn = beginnZeit.split(":")
-print (beginn)
-
-h = int(beginn[0])
-m = int(beginn[1])
-s = int(beginn[2])
-
-print("Stunden: ", h)
-print("Minuten: ", m)
-print("Sekunden: ", s)
-
+b = sys.argv
+a = b[1].split(":")
+h = int(a[0])
+m = int(a[1])
+s = int(a[2])
 beginnSekunden = s + m*60 + h*3600
-print("Gesamt Sekunden Beginn: ", beginnSekunden)
 
-ende = endeZeit.split(":")
-print(ende)
-
-h = int(ende[0])
-m = int(ende[1])
-s = int(ende[2])
-
-print("Stunden: ", h)
-print("Minuten: ", m)
-print("Sekunden: ", s)
-
+e = b[2].split(":")
+h = int(e[0])
+m = int(e[1])
+s = int(e[2])
 endeSekunden = s + m*60 + h*3600
-print("Gesamt Sekunden Ende: ", endeSekunden)
 
 print("Die Differenz beträgt: ", endeSekunden-beginnSekunden, " Sekunden")
