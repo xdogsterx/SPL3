@@ -8,7 +8,7 @@ def zeitInSekunden(h,m,s):
     return gesamt
 
 beginnZeit = input("Beginnzeit: ")
-##endeZeit = input("Endezeit: ")
+endeZeit = input("Endezeit: ")
 
 # Zeit in Format HH:MM:SS
 beginn = beginnZeit.split(":")
@@ -24,3 +24,17 @@ print("Sekunden: ", s)
 
 beginnSekunden = s + m*60 + h*3600
 print("Gesamt Sekunden Beginn: ", beginnSekunden)
+
+ende = endeZeit.split(":")
+print(ende)
+
+h = int(ende[0])
+m = int(ende[1])
+s = int(ende[2])
+
+print("Stunden: ", h)
+print("Minuten: ", m)
+print("Sekunden: ", s)
+
+endeSekunden = s + m*60 + h*3600
+print("Gesamt Sekunden Ende: ", endeSekunden)
