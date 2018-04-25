@@ -4,12 +4,13 @@
 print("Linienbus-Simulator")
 
 haltestellen = input("Wie viele Haltestellen gibt es?")
+ 
 
-print("Der Bus steht an Haltestelle ", haltestellen)
-
-einsteiger = input("Wie viele Personen steigen ein?")
-personen = int(einsteiger)
-
-for h in range (0,10):
-    
+for h in range (1,haltestellen):
+    print("Der Bus steht an Haltestelle ", h, ".") 
+    einsteiger = input("Wie viele Personen steigen ein?")
+    personen = int(einsteiger)   
     print("Es sind ", personen, " Personen im Bus.")
+
+print("Der Bus hat die Endstation erreicht.")
+print("Bitte alle aussteigen!")
