@@ -38,3 +38,5 @@ print("Sekunden: ", s)
 
 endeSekunden = s + m*60 + h*3600
 print("Gesamt Sekunden Ende: ", endeSekunden)
+
+print("Die Differenz beträgt: ", endeSekunden-beginnSekunden, " Sekunden")
